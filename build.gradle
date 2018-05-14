@@ -1,1 +1,9 @@
-group="com.github.harshild"
+apply plugin: 'java'
+
+group 'com.github.harshild'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
