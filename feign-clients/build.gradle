@@ -28,11 +28,11 @@ dependencyManagement {
 }
 
 dependencies {
-    compile project(':eureka-client')
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka', version:'1.4.4.RELEASE'
     compile group: 'org.springframework.boot',name: 'spring-boot-starter-web',version: '1.4.4.RELEASE'
 
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '+'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix', version: '+'
     compile group: 'org.projectlombok', name: 'lombok', version: '+'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

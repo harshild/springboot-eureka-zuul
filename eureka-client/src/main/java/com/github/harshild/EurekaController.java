@@ -1,12 +1,19 @@
 package com.github.harshild;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-public interface EurekaController {
+@RestController
+public class EurekaController {
 
     @RequestMapping("/greeting")
-    String greeting();
+    String greeting(){
+        return "Hello from EurekaClient!";
+    }
 
     @RequestMapping("/info")
-    String info() ;
+    String info() {
+        return "Connected!";
+    }
+
 }
