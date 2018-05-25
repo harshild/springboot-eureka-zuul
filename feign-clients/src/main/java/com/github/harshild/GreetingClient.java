@@ -1,4 +1,7 @@
 package com.github.harshild;
 
-public class GreetingClient {
+import org.springframework.cloud.netflix.feign.FeignClient;
+
+@FeignClient("spring-cloud-eureka-client")
+public interface GreetingClient extends EurekaController{
 }

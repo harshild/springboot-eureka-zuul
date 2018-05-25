@@ -9,13 +9,18 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class EurekaClientApplication {
+public class EurekaClientApplication implements EurekaController {
     public static void main(String[] args) {
         SpringApplication.run(EurekaClientApplication.class, args);
     }
 
-    @RequestMapping("/greeting")
+    @Override
     public String greeting() {
         return "Hello from EurekaClient!";
+    }
+
+    @Override
+    public String info() {
+        return "Connected!";
     }
 }

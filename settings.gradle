@@ -1,2 +1,4 @@
 include 'eureka-server'
+include 'eureka-client'
+include 'feign-clients'
 
