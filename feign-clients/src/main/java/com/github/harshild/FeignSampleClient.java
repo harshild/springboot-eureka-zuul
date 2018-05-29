@@ -27,7 +27,7 @@ public class FeignSampleClient {
 
     @RequestMapping(method = RequestMethod.GET, path = "/get-greeting")
     public String greeting() {
-        return greetingClient.greeting();
+            return greetingClient.greeting();
     }
 
     @Bean

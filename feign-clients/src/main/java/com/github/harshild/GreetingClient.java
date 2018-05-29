@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient("spring-cloud-eureka-client")
 public interface GreetingClient{
 
-    @RequestMapping(method = RequestMethod.GET, path =  "/get-greeting")
+    @RequestMapping(method = RequestMethod.GET, path =  "/greeting")
     String greeting();
 }
