@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class EurekaController {
-
     @RequestMapping("/greeting")
     String greeting(){
         return "Hello from EurekaClient!";
@@ -15,5 +14,4 @@ public class EurekaController {
     String info() {
         return "Connected!";
     }
-
 }
