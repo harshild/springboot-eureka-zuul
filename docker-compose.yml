@@ -1,0 +1,11 @@
+version: '3'
+
+services :
+  eureka-server :
+    build: .
+    command: java -jar /springboot-eureka-zuul/eureka-server/build/libs/eureka-server.jar > eureka-server-logs.txt
+    ports:
+      - "8761:8761"
+  eureka-client :
+      build: .
+      command: java -jar /springboot-eureka-zuul/eureka-client/build/libs/eureka-client.jar > eureka-client-logs.txt
