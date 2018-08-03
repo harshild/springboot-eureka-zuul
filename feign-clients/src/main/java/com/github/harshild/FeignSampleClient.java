@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients
 @RestController
 @Configuration
 public class FeignSampleClient {
@@ -28,6 +27,11 @@ public class FeignSampleClient {
     @RequestMapping(method = RequestMethod.GET, path = "/get-greeting")
     public String greeting() {
             return greetingClient.greeting();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/get-greeting-new")
+    public String greeting_new() {
+            return greetingClient.greeting_new();
     }
 
     @Bean
