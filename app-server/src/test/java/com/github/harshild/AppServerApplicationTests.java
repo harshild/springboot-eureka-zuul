@@ -16,7 +16,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(webEnvironment = DEFINED_PORT)
-public class EurekaClientApplicationTests {
+public class AppServerApplicationTests {
     @Autowired
     private TestRestTemplate testRestTemplate;
 

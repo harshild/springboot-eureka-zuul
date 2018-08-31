@@ -1,5 +1,5 @@
+include 'app-server'
 include 'eureka-server'
-include 'eureka-client'
 include 'feign-clients'
 include 'zuul-server'
 include 'config-server'

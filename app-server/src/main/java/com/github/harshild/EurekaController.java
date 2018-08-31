@@ -7,21 +7,24 @@ import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.PingUrl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RibbonClient(name = "spring-cloud-eureka-client",
+@RibbonClient(name = "spring-cloud-app-server",
         configuration = RibbonServiceConfig.class)
+@RefreshScope
 public class EurekaController {
+
+    @Value("${foo}")
+    private String foo;
 
     @RequestMapping("/greeting")
     String greeting(){
-        return "Hello from EurekaClient!";
+        return "Hello from EurekaClient! "+foo;
     }
 
     @RequestMapping("/info")
